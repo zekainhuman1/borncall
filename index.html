@@ -4,8 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Vite Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="./src/public/image/logo.png" alt="BornCall logo">
+      </div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item"><a href="#!" class="link">Головна</a></li>
+          <li class="header__menu-item"><a href="#!" class="link">Про нас</a></li>
+          <li class="header__menu-item"><a href="#!" class="link">Послуги</a></li>
+          <li class="header__menu-item"><a href="#!" class="link">Контакти</a></li>
+        </ul>
+      </nav>
+      <a class="phone" href="tel:+380993219864"><img src="./src/public/svg/phone-call.svg" alt="phone-call">(099) 076-54-74</a>
+      <button class="header__button">Запланувати дзвінок</button>
+    </header>
+    <main class="main">
+      <section class="hero">
+        <h1 class="hero__title">BORNCALL</h1>
+        <p class="hero__subtitle">Зв'язок, який народжує успіх.</p>
+      </section>
+      <section class="subhero">
+        <h3 class="subhero__text">Ми заснували Borncall з щирої відданості людям. Наші цілі, амбіції та натхнення об'єдналися, щоб сформувати дійсно дивовижну компанію, частиною якої ми всі пишаємося.</h3>
+        <p class="subhero__text"><a href="#!" class="subhero__text--link">Зв'яжіться з нами<svg viewBox="48 -13 1 60" style="transform: scale(4, 2);">
+          <path d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527" />
+      </svg></a>, щоб дізнатися більше про Borncall і про те, як ми віддано обслуговуємо наших клієнтів з 2023 року.</p>
+      </section>
+
+      <section class="services">
+        <h2 class="services__title">Послуги, які ми<br>пропонуємо</h2>
+<div class="services__box">
+  <a href="#!">
+    <div class="service">
+    <img src="./src/public/image/7.jpg" alt="service">
+    <span class="service__title">Операторські</span>
+    <p class="service__text">виконання завдань, пов'язаних з обробкою дзвінків та інших видів комунікації за допомогою операторів</p>
+  </div>
+</a>
+
+  <a href="#!">
+    <div class="service">
+      <img src="./src/public/image/17.jpg" alt="service">
+      <span class="service__title">Ринкові<br>дослідження</span>
+      <p class="service__text">проведення опитувань клієнтів для збору даних чи відгуків про продукти та послуги компанії</p>
+    </div>
+  </a>
+  
+    <a href="#!">
+      <div class="service">
+      <img src="./src/public/image/4.jpg" alt="service">
+    <span class="service__title">Інші послуги</span>
+    <p class="service__text">включають в себе різноманітні види комунікації з клієнтами, такі як електронна пошта, чат-боти, відео-конференції та інші</p>
+  </div>
+    
+  </a>
+</div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <address>
+        <a class="phone" href="tel:+380993219864"><img src="./src/public/svg/phone-call.svg" alt="phone-call">(099) 076-54-74</a>
+      <a class="email" href="mailto:borncall.pl@gmail.com"><img src="./src/public/svg/email.svg" alt="phone-call">borncall.pl@gmail.com</a>
+      </address>
+      <span>©2023 від Borncall</span>
+    </footer>
     <div id="app"></div>
     <script type="module" src="/src/js/main.js"></script>
   </body>
