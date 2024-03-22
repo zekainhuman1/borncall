@@ -16,3 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', checkScroll);
     checkScroll();
 });
+
+var input = document.querySelector('#burger');
+
+input.addEventListener('change', function () {
+    if (input.checked) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+});
