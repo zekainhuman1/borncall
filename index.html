@@ -2,11 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Послуги колл-центру. Call center services">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Vite Template</title>
+    <title>BornCall</title>
+    <link rel="preload" href="./src/public/image/16-65fc3a6a1cf46_3_optimized.webp" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script async>
+      var font = new FontFace('YourFont', 'url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap)');
+      font.load().then(function() {
+        document.fonts.add(font);
+        document.documentElement.style.fontFamily = 'YourFont, sans-serif';
+      });
+    </script>
   </head>
   <body>
     <header class="header">
@@ -57,7 +65,7 @@
   <a href="#!">
     <div class="service">
       <picture>
-        <source srcset="./src/public/image/2-65fc3a37bbb88.webp" type="image/webp">
+        <source srcset="./src/public/image/2-65fc3a37bbb88_450x300.webp" type="image/webp">
         <img src="./src/public/image/2.jpg" alt="service">
       </picture>
     <span class="service__title">Операторські</span>
@@ -68,7 +76,7 @@
   <a href="#!">
     <div class="service">
       <picture>
-        <source srcset="./src/public/image/12-65fc3a5fbf946.webp" type="image/webp">
+        <source srcset="./src/public/image/12-65fc3a5fbf946_450x300.webp" type="image/webp">
         <img src="./src/public/image/12.jpg" alt="service">
       </picture>
       <span class="service__title">Ринкові<br>дослідження</span>
@@ -79,7 +87,7 @@
     <a href="#!">
       <div class="service">
         <picture>
-          <source srcset="./src/public/image/4-65fc3a3f8a86a.webp" type="image/webp">
+          <source srcset="./src/public/image/4-65fc3a3f8a86a_450x300.webp" type="image/webp">
           <img src="./src/public/image/4.jpg" alt="service">
         </picture>
     <span class="service__title">Інші послуги</span>

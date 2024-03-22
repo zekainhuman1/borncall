@@ -43,10 +43,8 @@
         text-align: left;
 
         img {
-            // max-width: 100%;
-            // max-height: 100px;
             width: 100px;
-            height: auto;
+            height: 93px;
             display: inline-block;
         }
     }
@@ -151,7 +149,7 @@
         text-align: center;
         position: relative;
         overflow: hidden;
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%), url("../public/image/16-65fc3a6a1cf46.webp");
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%), url("../public/image/16-65fc3a6a1cf46_3_optimized.webp");
 
         background-size: cover;
         background-position: center;
@@ -183,12 +181,12 @@
     }
 }
 
-@supports (background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%), url("../public/image/16-65fc3a6a1cf46.webp")) {
+@supports (background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%), url("../public/image/16-65fc3a6a1cf46_3_optimized.webp")) {
     .hero {
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%), url("../public/image/16-65fc3a6a1cf46.webp");
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%), url("../public/image/16-65fc3a6a1cf46_3_optimized.webp");
     }
 }
-@supports not (background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%), url("../public/image/16-65fc3a6a1cf46.webp")) {
+@supports not (background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%), url("../public/image/16-65fc3a6a1cf46_3_optimized.webp")) {
     .hero {
         background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%), url("../public/image/16.png")
     }
