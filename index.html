@@ -20,7 +20,6 @@
       </div>
 
       <input id="burger" type="checkbox">
-
       <label for="burger">
           <span></span>
           <span></span>
@@ -35,22 +34,31 @@
           <li class="header__menu-item"><a href="#!" class="link">Контакти</a></li>
         </ul>
       </nav>
+
       <a class="phone" href="tel:+380990765474"><img src="./src/public/svg/phone-call.svg" alt="phone-call">(099) 076-54-74</a>
+      
       <button class="header__button" onclick="showForm()">Запланувати дзвінок</button>
       
       <div class="modal" id="modal">
         <div class="modal__content">
           <span class="close" onclick="closeModal()">&times;</span>
-          <form class="modal__form" netlify>
+          <form class="modal__form" action="/" netlify>
             <label for="nameField">Введіть Ваше ім'я:</label>
             <input type="text" id="nameField" name="nameField" placeholder="Микола"><br><br>
             <label for="phoneField">Ваш номер телефону:</label>
-            <input type="tel" id="phoneField" name="phoneField" placeholder="+380 (XX) XXX-XX-XX" pattern="^\+380 \(\d{2}\) \d{3}-\d{2}-\d{2}$"><br><br>
+            <input type="tel" id="phoneField" name="phoneField" placeholder="+380998765432" pattern="^\+380\d{9}$"><br><br>
             <input type="submit" value="Відправити">
           </form>
         </div>
       </div>
+
       <div class="overlay" id="overlay"></div>
+
+      <div id="confirmationModal" class="modal">
+        <div class="modal__content">
+          <p>Контакті дані відправлено! Очікуйте на дзвінок менеджера.</p>
+        </div>
+      </div>
 
 <div class="menu-place"></div>
 
