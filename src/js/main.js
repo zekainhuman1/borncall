@@ -75,6 +75,7 @@ function showConfirmation() {
     setTimeout(function () {
         confirmationModal.style.display = 'none';
         overlay.style.display = 'none';
+        closeModal();
     }, 3000);
 }
 
@@ -84,7 +85,7 @@ export function submitForm() {
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        closeModal();
+        // closeModal();
         showConfirmation();
     });
 }
