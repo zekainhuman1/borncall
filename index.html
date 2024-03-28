@@ -5,13 +5,37 @@
     <meta name="description" content="Послуги колл-центру. Call center services">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BornCall</title>
+    <link rel="preload" href="./src/scss/preloader.scss" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="./src/public/image/phone.webp" as="image">
     <link rel="preload" href="./src/public/image/16-65fc3a6a1cf46_3_optimized.webp" as="image">
     <link rel="preload" as="font" type="font/woff2" href="./src/public/fonts/Lato-Regular.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="./src/public/fonts/Lato-Black.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="./src/public/fonts/Lato-Bold.woff2" crossorigin>
   </head>
   <body>
-    <header class="header">
+    <style>
+          .hidden {
+        display: none;
+    }
+    </style>
+<div class="preloader" id="preloader">
+  <div class="cback">
+    <style>
+      .cback-circle {
+        background: #ffcd43;
+        color: #ffcd43;
+      }
+    </style>
+      <div class="cback-circle fn1"></div>
+      <div class="cback-circle fn2"></div>
+      <div class="cback-circle cback-circle--phone">
+        <i class='phone-icon'></i>
+      </div>
+  </div>
+</div>
+
+
+    <header class="header hidden" id="header">
       <div class="header__logo">
         <picture>
           <source srcset="./src/public/image/logo-65fc3a74c2793.webp" type="image/webp">
@@ -44,6 +68,8 @@
           <span class="close" onclick="closeModal()">&times;</span>
           <form class="modal__form" action="/" netlify>
             <label for="nameField">Введіть Ваше ім'я:</label>
+            <input type="hidden" name="form-name" value="form">
+
             <input type="text" id="nameField" name="nameField" placeholder="Микола"><br><br>
             <label for="phoneField">Ваш номер телефону:</label>
             <input type="tel" id="phoneField" name="phoneField" placeholder="+380998765432" pattern="^\+380\d{9}$"><br><br>
@@ -63,7 +89,7 @@
 <div class="menu-place"></div>
 
     </header>
-    <main class="main">
+    <main class="main hidden" id="main">
       <section class="hero">
         <h1 class="hero__title">BORNCALL</h1>
         <p class="hero__subtitle">Зв'язок, який народжує успіх.</p>
@@ -115,8 +141,7 @@
       </section>
 
     </main>
-
-    <footer class="footer">
+    <footer class="footer hidden" id="footer">
       <address>
         <a class="phone" href="tel:+380990765474"><img src="./src/public/svg/phone-call.svg" alt="phone-call">(099) 076-54-74</a>
       <a class="email" href="mailto:borncall.pl@gmail.com"><img src="./src/public/svg/email.svg" alt="phone-call">borncall.pl@gmail.com</a>

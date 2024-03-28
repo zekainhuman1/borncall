@@ -1,9 +1,18 @@
 import '../scss/style.scss'
-
+// document.addEventListener("DOMContentLoaded", function () {
+//     var preloader = document.getElementById('preloader');
+//     preloader.style.display = 'none';
+// });
 
 document.addEventListener('DOMContentLoaded', function () {
     var services = document.querySelectorAll('.service');
     var windowHeight = window.innerHeight;
+    var preloader = document.getElementById('preloader');
+    preloader.style.display = 'none';
+    document.getElementById("header").classList.remove('hidden');
+    document.getElementById("main").classList.remove('hidden');
+    document.getElementById("footer").classList.remove('hidden');
+
 
     function checkScroll() {
         services.forEach(function (service) {
