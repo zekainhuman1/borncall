@@ -66,9 +66,8 @@
       <div class="modal" id="modal">
         <div class="modal__content">
           <span class="close" onclick="closeModal()">&times;</span>
-          <form class="modal__form" method="POST" action="/src/pages/confirm_form/index.html" data-netlify="true">
+          <form class="modal__form" method="POST" action="/confirm_form" netlify>
             <label for="nameField">Введіть Ваше ім'я:</label>
-            <input type='hidden' name='form-name' value='form' />
             <input type="text" id="nameField" name="nameField" placeholder="Микола"><br><br>
             <label for="phoneField">Ваш номер телефону:</label>
             <input type="tel" id="phoneField" name="phoneField" placeholder="+380998765432" pattern="^\+380\d{9}$"><br><br>
