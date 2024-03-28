@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="description" content="Послуги колл-центру. Call center services">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BornCall</title>
+    <title>BornCall | Головна</title>
     <style>
       .hidden {
-    display: none;
-}
+        display: none;
+      }
 
-.cback-circle {
+      .cback-circle {
         background: #ffcd43;
         color: #ffcd43;
       }
-</style>
+    </style>
     <link rel="preload" href="./src/scss/preloader.scss" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="./src/public/image/phone.webp" as="image">
     <link rel="preload" href="./src/public/image/16-65fc3a6a1cf46_3_optimized.webp" as="image">
@@ -66,9 +66,9 @@
       <div class="modal" id="modal">
         <div class="modal__content">
           <span class="close" onclick="closeModal()">&times;</span>
-          <form class="modal__form" action="/submitForm" data-netlify="true">
+          <form class="modal__form" action="./confirm_form/" data-netlify="true">
             <label for="nameField">Введіть Ваше ім'я:</label>
-
+            <input type='hidden' name='form-name' value='form' />
             <input type="text" id="nameField" name="nameField" placeholder="Микола"><br><br>
             <label for="phoneField">Ваш номер телефону:</label>
             <input type="tel" id="phoneField" name="phoneField" placeholder="+380998765432" pattern="^\+380\d{9}$"><br><br>
@@ -78,12 +78,6 @@
       </div>
 
       <div class="overlay" id="overlay"></div>
-
-      <div id="confirmationModal" class="modal">
-        <div class="modal__content">
-          <p>Контакті дані відправлено! Очікуйте на дзвінок менеджера.</p>
-        </div>
-      </div>
 
 <div class="menu-place"></div>
 

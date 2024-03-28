@@ -1,0 +1,100 @@
+@import 'normalize.css';
+@import 'variables.scss';
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('../public/fonts/Lato-Regular.woff2') format('woff2'),
+    url('../public/fonts/Lato-Regular.woff') format('woff'),
+    url('../public/fonts/Lato-Regular.ttf') format('truetype');
+    font-display: swap
+}
+
+@font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        src: local(''),
+        url('../public/fonts/Lato-Bold.woff2') format('woff2'),
+        url('../public/fonts/Lato-Bold.woff') format('woff'),
+        url('../public/fonts/Lato-Bold.ttf') format('truetype');
+        font-display: swap
+}
+
+@font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 900;
+        src: local(''),
+        url('../public/fonts/Lato-Black.woff2') format('woff2'),
+        url('../public/fonts/Lato-Black.woff') format('woff'),
+        url('../public/fonts/Lato-Black.ttf') format('truetype');
+        font-display: swap
+}
+
+* {
+    font-family: "Lato", sans-serif;
+}
+
+.confirm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(-50%, -50%);
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .confirm__title {
+        text-align: center;
+    }
+
+    .confirm__subtitle {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    button {
+        margin-top: 30px;
+        padding: 10px 20px;
+        background-color: $color-primary;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            display: inline;
+        
+            background-color: $color-accent;
+          }
+      }
+
+}
+
+@media screen and (min-width: 421px) and (max-width: 800px) {
+    .confirm__title {
+        font-size: 24px;
+    }
+
+    .confirm__subtitle {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .confirm__title {
+        font-size: 20px;
+    }
+
+    .confirm__subtitle {
+        font-size: 14px !important;
+    }
+}
