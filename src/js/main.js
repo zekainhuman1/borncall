@@ -75,18 +75,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-function showConfirmation() {
-    var confirmationModal = document.getElementById('confirmationModal');
-    var overlay = document.getElementById('overlay');
+// function showConfirmation() {
+//     var confirmationModal = document.getElementById('confirmationModal');
+//     var overlay = document.getElementById('overlay');
 
-    confirmationModal.style.display = 'block';
-    overlay.style.display = 'block';
+//     confirmationModal.style.display = 'block';
+//     overlay.style.display = 'block';
 
-    setTimeout(function () {
-        confirmationModal.style.display = 'none';
-        overlay.style.display = 'none';
-    }, 3000);
-}
+//     setTimeout(function () {
+//         confirmationModal.style.display = 'none';
+//         overlay.style.display = 'none';
+//     }, 3000);
+// }
 
 
 window.showForm = showForm;
