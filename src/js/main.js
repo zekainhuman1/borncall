@@ -64,16 +64,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    var form = document.querySelector('.modal__form');
+// document.addEventListener('DOMContentLoaded', function () {
+//     var form = document.querySelector('.modal__form');
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+//     form.addEventListener('submit', function (event) {
+//         event.preventDefault();
 
-        closeModal();
-        showConfirmation();
-    });
-});
+//         closeModal();
+//         showConfirmation();
+//     });
+// });
 
 // function showConfirmation() {
 //     var confirmationModal = document.getElementById('confirmationModal');
