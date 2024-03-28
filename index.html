@@ -5,6 +5,16 @@
     <meta name="description" content="Послуги колл-центру. Call center services">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BornCall</title>
+    <style>
+      .hidden {
+    display: none;
+}
+
+.cback-circle {
+        background: #ffcd43;
+        color: #ffcd43;
+      }
+</style>
     <link rel="preload" href="./src/scss/preloader.scss" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="./src/public/image/phone.webp" as="image">
     <link rel="preload" href="./src/public/image/16-65fc3a6a1cf46_3_optimized.webp" as="image">
@@ -13,19 +23,9 @@
     <link rel="preload" as="font" type="font/woff2" href="./src/public/fonts/Lato-Bold.woff2" crossorigin>
   </head>
   <body>
-    <style>
-          .hidden {
-        display: none;
-    }
-    </style>
+
 <div class="preloader" id="preloader">
   <div class="cback">
-    <style>
-      .cback-circle {
-        background: #ffcd43;
-        color: #ffcd43;
-      }
-    </style>
       <div class="cback-circle fn1"></div>
       <div class="cback-circle fn2"></div>
       <div class="cback-circle cback-circle--phone">
@@ -66,7 +66,7 @@
       <div class="modal" id="modal">
         <div class="modal__content">
           <span class="close" onclick="closeModal()">&times;</span>
-          <form class="modal__form" action="." netlify>
+          <form class="modal__form" action="." data-netlify="true">
             <label for="nameField">Введіть Ваше ім'я:</label>
             <input type="hidden" name="form-name" value="form">
 
