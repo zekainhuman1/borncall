@@ -64,31 +64,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     var form = document.querySelector('.modal__form');
 
-//     form.addEventListener('submit', function (event) {
-//         event.preventDefault();
+function showConfirmation() {
+    var confirmationModal = document.getElementById('confirmationModal');
+    var overlay = document.getElementById('overlay');
 
-//         closeModal();
-//         showConfirmation();
-//     });
-// });
+    confirmationModal.style.display = 'block';
+    overlay.style.display = 'block';
 
-// function showConfirmation() {
-//     var confirmationModal = document.getElementById('confirmationModal');
-//     var overlay = document.getElementById('overlay');
+    setTimeout(function () {
+        confirmationModal.style.display = 'none';
+        overlay.style.display = 'none';
+    }, 3000);
+}
 
-//     confirmationModal.style.display = 'block';
-//     overlay.style.display = 'block';
+export function submitForm() {
+    var form = document.querySelector('.modal__form');
 
-//     setTimeout(function () {
-//         confirmationModal.style.display = 'none';
-//         overlay.style.display = 'none';
-//     }, 3000);
-// }
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        closeModal();
+        showConfirmation();
+    });
+}
 
 
 window.showForm = showForm;
 window.closeModal = closeModal;
-// window.showConfirmation = showConfirmation;
+window.submitForm = submitForm;
