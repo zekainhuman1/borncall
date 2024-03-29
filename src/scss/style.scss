@@ -813,12 +813,8 @@
                 width: 15px;
                 display: inline;
             }
-    
-            #burger {
-                display: none;
-            }
         
-            input + label {
+            input + .burger {
                 display: inline;
                 position: absolute;
                 top: 30px;

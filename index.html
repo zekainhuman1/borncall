@@ -44,7 +44,7 @@
       </div>
 
       <input id="burger" type="checkbox">
-      <label for="burger">
+      <label class="burger" for="burger">
           <span></span>
           <span></span>
           <span></span>
@@ -66,7 +66,8 @@
       <div class="modal" id="modal">
         <div class="modal__content">
           <span class="close" onclick="closeModal()">&times;</span>
-          <form name="contact" class="modal__form" method="POST" action="/confirm_form" netlify>
+          <form name="contact" class="modal__form" action="/confirm_form/" netlify>
+            <br>
             <label for="nameField">Введіть Ваше ім'я:</label>
             <input type="text" id="nameField" name="nameField" placeholder="Микола"><br><br>
             <label for="phoneField">Ваш номер телефону:</label>
