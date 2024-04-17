@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="description" content="Послуги колл-центру. Call center services">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,157 +12,180 @@
     <link rel="preload" as="font" type="font/woff2" href="../src/public/fonts/Lato-Regular.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="../src/public/fonts/Lato-Black.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="../src/public/fonts/Lato-Bold.woff2" crossorigin>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="preloader" id="preloader">
         <div class="cback">
             <div class="cback-circle fn1"></div>
             <div class="cback-circle fn2"></div>
             <div class="cback-circle cback-circle--phone">
-              <i class='phone-icon'></i>
+                <i class='phone-icon'></i>
             </div>
         </div>
-      </div>
-      
-          <header class="header hidden" id="header">
-            <div class="header__logo">
-              <picture>
+    </div>
+
+    <header class="header hidden" id="header">
+        <div class="header__logo">
+            <picture>
                 <source srcset="../src/public/image/logo-65fc3a74c2793.webp" type="image/webp">
                 <img src="../src/public/image/logo.png" alt="BornCall logo">
-              </picture>
-            </div>
-      
-            <input id="burger" type="checkbox">
-            <label class="burger" for="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-      
-            <nav class="header__nav">
-                <ul class="header__menu">
-                    <li class="header__menu-item"><a href="/" >Головна</a></li>
-                    <li class="header__menu-item"><a href="/about_us/" >Про нас</a></li>
-                    <li class="header__menu-item"><a href="#!" >Послуги</a></li>
-                    <li class="header__menu-item"><a href="#!" >Контакти</a></li>
-                  </ul>
-            </nav>
-      
-            <a class="phone" href="tel:+380990765474"><img src="../src/public/svg/phone-call.svg" alt="phone-call">(099) 076-54-74</a>
-            
-            <button class="header__button" onclick="showForm()">Запланувати дзвінок</button>
-            
-            <div class="modal" id="modal">
-              <div class="modal__content">
+            </picture>
+        </div>
+
+        <input id="burger" type="checkbox">
+        <label class="burger" for="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="/">Головна</a></li>
+                <li class="header__menu-item"><a href="/about_us/">Про нас</a></li>
+                <li class="header__menu-item"><a href="#!">Послуги</a></li>
+                <li class="header__menu-item"><a href="#!">Контакти</a></li>
+            </ul>
+        </nav>
+
+        <a class="phone" href="tel:+380990765474"><img src="../src/public/svg/phone-call.svg" alt="phone-call">(099)
+            076-54-74</a>
+
+        <button class="header__button" onclick="showForm()">Запланувати дзвінок</button>
+
+        <div class="modal" id="modal">
+            <div class="modal__content">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <form name="contact" class="modal__form" action="/confirm_form/" netlify>
-                  <br>
-                  <label for="nameField">Введіть Ваше ім'я:</label>
-                  <input type="text" id="nameField" name="nameField" placeholder="Микола"><br><br>
-                  <label for="phoneField">Ваш номер телефону:</label>
-                  <input type="tel" id="phoneField" name="phoneField" placeholder="+380998765432" pattern="^\+380\d{9}$"><br><br>
-                  <input type="submit" value="Відправити">
+                    <br>
+                    <label for="nameField">Введіть Ваше ім'я:</label>
+                    <input type="text" id="nameField" name="nameField" placeholder="Микола"><br><br>
+                    <label for="phoneField">Ваш номер телефону:</label>
+                    <input type="tel" id="phoneField" name="phoneField" placeholder="+380998765432"
+                        pattern="^\+380\d{9}$"><br><br>
+                    <input type="submit" value="Відправити">
                 </form>
-              </div>
             </div>
-      
-            <div class="overlay" id="overlay"></div>
-      
-      <div class="menu-place"></div>
-      
-          </header>
+        </div>
 
-          <main>
-            <section class="about">
-                <h2 class="about__title">BORNCALL</h2>
-                <p class="about__description">Все почалося з групи людей, які мріяли розпочати щось нове, інноваційне та в чому являються досвідченими.<br><br>Разом ми заснували компанію Borncall, яка займається пошуком передових рішень та наданням високоякісних послуг.<br><br>Що відрізняє нас від інших, так це наша здатність адаптувати нашу пропозицію до потреб клієнтів, а також наша фантастична команда фахівців. Перегляньте наш сайт, щоб дізнатися більше, або просто зв'яжіться з нами.<br><br>Наші продукти та послуги були розроблені, щоб задовольнити всіх наших клієнтів, в будь-який час, в будь-якому місці. Задоволення потреб клієнтів є нашим головним пріоритетом. Якщо ви хочете дізнатися більше про те, як ми працюємо, <a href="#!" onclick="showForm()">зв'яжіться з нами</a> сьогодні.</p>
-            </section>
+        <div class="overlay" id="overlay"></div>
 
-            <section class="values">
-                <h2 class="values__title">ЦІННОСТІ НАШОЇ КОМАНДИ</h2>
-                <div class="values__container">
-                    <div class="container__item">
-                        <h4 class="item__title">Відповідальність</h4>
-                        <blockquote class="item__bq">
-                            <p class="item__text">"Відповідальність - це коли ми беремо на себе відповідальність за свої дії та наслідки, які вони можуть мати. Вона ґрунтується на визнанні того, що ми контролюємо своє життя і приймаємо рішення, які впливають на наші результати".</p>
-                            <cite class="item__cite">Стівен Кові, автор книги "7 звичок високоефективних людей"</cite>
-                        </blockquote>
-                    </div>
-                    <div class="container__item">
-                        <h4 class="item__title">Проактивність</h4>
-                        <blockquote class="item__bq">
-                            <p class="item__text">"Проактивність - це прояв ініціативи та відповідальність за своє життя. Вона ґрунтується на визнанні того, що ми маємо свободу робити вибір і робити кроки, які допоможуть нам досягти наших цілей".</p>
-                            <cite class="item__cite">Стівен Кові, автор книги "7 звичок високоефективних людей"</cite>
-                        </blockquote>
-                    </div>
-                    <div class="container__item">
-                        <h4 class="item__title">Клієнтоорієнтованість</h4>
-                        <blockquote class="item__bq">
-                            <p class="item__text">"Клієнтоорієнтованість означає більше, ніж просто задоволення потреб клієнтів. Це означає розуміння їхніх бажань і потреб та усвідомлення того, що ми можемо зробити, щоб перевершити їхні очікування. Це про побудову відносин, заснованих на взаємній вигоді та довірі".</p>
-                            <cite class="item__cite">Джон ДіДжуліус, засновник DiJulius Group.</cite>
-                        </blockquote>
-                    </div>
-                    <div class="container__item">
-                        <h4 class="item__title">Інноваційність</h4>
-                        <blockquote class="item__bq">
-                            <p class="item__text">"Інновації - це не про зміну старих методів на нові, це про мислення по-новому і пошук абсолютно інших шляхів вирішення проблем. Це про ризик і пошук нових можливостей там, де інші їх не бачать".</p>
-                            <cite class="item__cite">Тім Кук, генеральний директор Apple.</cite>
-                        </blockquote>
-                    </div>
+        <div class="menu-place"></div>
+
+    </header>
+
+    <main>
+        <section class="about">
+            <h2 class="about__title">BORNCALL</h2>
+            <p class="about__description">Все почалося з групи людей, які мріяли розпочати щось нове, інноваційне та в
+                чому являються досвідченими.<br><br>Разом ми заснували компанію Borncall, яка займається пошуком
+                передових рішень та наданням високоякісних послуг.<br><br>Що відрізняє нас від інших, так це наша
+                здатність адаптувати нашу пропозицію до потреб клієнтів, а також наша фантастична команда фахівців.
+                Перегляньте наш сайт, щоб дізнатися більше, або просто зв'яжіться з нами.<br><br>Наші продукти та
+                послуги були розроблені, щоб задовольнити всіх наших клієнтів, в будь-який час, в будь-якому місці.
+                Задоволення потреб клієнтів є нашим головним пріоритетом. Якщо ви хочете дізнатися більше про те, як ми
+                працюємо, <a href="#!" onclick="showForm()">зв'яжіться з нами</a> сьогодні.</p>
+        </section>
+
+        <section class="values">
+            <h2 class="values__title">ЦІННОСТІ НАШОЇ КОМАНДИ</h2>
+            <div class="values__container">
+                <div class="container__item">
+                    <h4 class="item__title">Відповідальність</h4>
+                    <blockquote class="item__bq">
+                        <p class="item__text">"Відповідальність - це коли ми беремо на себе відповідальність за свої дії
+                            та наслідки, які вони можуть мати. Вона ґрунтується на визнанні того, що ми контролюємо своє
+                            життя і приймаємо рішення, які впливають на наші результати".</p>
+                        <cite class="item__cite">Стівен Кові, автор книги "7 звичок високоефективних людей"</cite>
+                    </blockquote>
                 </div>
+                <div class="container__item">
+                    <h4 class="item__title">Проактивність</h4>
+                    <blockquote class="item__bq">
+                        <p class="item__text">"Проактивність - це прояв ініціативи та відповідальність за своє життя.
+                            Вона ґрунтується на визнанні того, що ми маємо свободу робити вибір і робити кроки, які
+                            допоможуть нам досягти наших цілей".</p>
+                        <cite class="item__cite">Стівен Кові, автор книги "7 звичок високоефективних людей"</cite>
+                    </blockquote>
+                </div>
+                <div class="container__item">
+                    <h4 class="item__title">Клієнтоорієнтованість</h4>
+                    <blockquote class="item__bq">
+                        <p class="item__text">"Клієнтоорієнтованість означає більше, ніж просто задоволення потреб
+                            клієнтів. Це означає розуміння їхніх бажань і потреб та усвідомлення того, що ми можемо
+                            зробити, щоб перевершити їхні очікування. Це про побудову відносин, заснованих на взаємній
+                            вигоді та довірі".</p>
+                        <cite class="item__cite">Джон ДіДжуліус, засновник DiJulius Group.</cite>
+                    </blockquote>
+                </div>
+                <div class="container__item">
+                    <h4 class="item__title">Інноваційність</h4>
+                    <blockquote class="item__bq">
+                        <p class="item__text">"Інновації - це не про зміну старих методів на нові, це про мислення
+                            по-новому і пошук абсолютно інших шляхів вирішення проблем. Це про ризик і пошук нових
+                            можливостей там, де інші їх не бачать".</p>
+                        <cite class="item__cite">Тім Кук, генеральний директор Apple.</cite>
+                    </blockquote>
+                </div>
+            </div>
 
-            </section>
+        </section>
 
-            <section class="guarantees">
-                <h2 class="guarantees__title">МИ ГАРАНТУЄМО</h2>
-<div class="guarantees__block">
-    <div class="guarantees__card">
-        <div class="guarantees__inner">
-          <h3>Виннятковість</h3>
-          <p>Індивідуальний підхід до кожного проекту, навчання операторів під ваші потреби та унікальні скрипти, створені для вашого проєкту.</p>
-        </div>
-      </a>
-    </div>
-    <div class="guarantees__card">
-        <div class="guarantees__inner">
-          <h3>Комунікація</h3>
-          <p>Натуральне та природне спілкування з вашими клієнтами.</p>
-        </div>
-      </a>
-    </div>
-    <div class="guarantees__card">
-        <div class="guarantees__inner">
-          <h3>Омніканальність</h3>
-          <p>Оператори здатні до багатозадачності та універсальні в своїй роботі.</p>
-        </div>
-      </a>
-    </div>
-    <div class="guarantees__card">
-        <div class="guarantees__inner">
-          <h3>Відкритість</h3>
-          <p>Прозорість у роботі, дійсна та чесна статистика результатів вашого проекту.</p>
-        </div>
-      </a>
-    </div>
-    <div class="guarantees__card">
-        <div class="guarantees__inner">
-          <h3>Доступність</h3>
-          <p>Графік роботи проекту доступний 12/7/365.</p>
-        </div>
-      </a>
-    </div>
-</div>
-            </section>
+        <section class="guarantees">
+            <h2 class="guarantees__title">МИ ГАРАНТУЄМО</h2>
+            <div class="guarantees__block">
+                <div class="guarantees__card">
+                    <div class="guarantees__inner">
+                        <h3>Виннятковість</h3>
+                        <p>Індивідуальний підхід до кожного проекту, навчання операторів під ваші потреби та унікальні
+                            скрипти, створені для вашого проєкту.</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="guarantees__card">
+                    <div class="guarantees__inner">
+                        <h3>Комунікація</h3>
+                        <p>Натуральне та природне спілкування з вашими клієнтами.</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="guarantees__card">
+                    <div class="guarantees__inner">
+                        <h3>Омніканальність</h3>
+                        <p>Оператори здатні до багатозадачності та універсальні в своїй роботі.</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="guarantees__card">
+                    <div class="guarantees__inner">
+                        <h3>Відкритість</h3>
+                        <p>Прозорість у роботі, дійсна та чесна статистика результатів вашого проекту.</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="guarantees__card">
+                    <div class="guarantees__inner">
+                        <h3>Доступність</h3>
+                        <p>Графік роботи проекту доступний 12/7/365.</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-          </main>
-          <footer class="footer hidden" id="footer">
-            <address>
-              <a class="phone" href="tel:+380990765474"><img src="../src/public/svg/phone-call.svg" alt="phone-call">(099) 076-54-74</a>
-            <a class="email" href="mailto:borncall.pl@gmail.com"><img src="../src/public/svg/email.svg" alt="phone-call">borncall.pl@gmail.com</a>
-            </address>
-            <span>©2023 від Borncall</span>
-          </footer>
-          <div id="app"></div>
-          <script type="module" src="../src/js/main.js"></script>
-  </body>
+    </main>
+    <footer class="footer hidden" id="footer">
+        <address>
+            <a class="phone" href="tel:+380990765474"><img src="../src/public/svg/phone-call.svg" alt="phone-call">(099)
+                076-54-74</a>
+            <a class="email" href="mailto:borncall.pl@gmail.com"><img src="../src/public/svg/email.svg"
+                    alt="phone-call">borncall.pl@gmail.com</a>
+        </address>
+        <span>©2023 від Borncall</span>
+    </footer>
+    <div id="app"></div>
+    <script type="module" src="../src/js/main.js"></script>
+</body>
+
 </html>
