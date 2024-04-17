@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("main").classList.remove('hidden');
     document.getElementById("footer").classList.remove('hidden');
 
-
     function checkScroll() {
         services.forEach(function (service) {
             var servicePosition = service.getBoundingClientRect().top;
@@ -25,6 +24,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', checkScroll);
     checkScroll();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    var items = document.querySelectorAll('.container__item');
+
+    function checkScroll() {
+        items.forEach(function (item, index) {
+            var itemPosition = item.getBoundingClientRect().top;
+            var windowHeight = window.innerHeight;
+            if (itemPosition - windowHeight <= 0) {
+                item.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Вызываем функцию при загрузке страницы, чтобы показать видимые элементы
 });
 
 var input = document.querySelector('#burger');

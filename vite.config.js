@@ -7,6 +7,7 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 confirm_form: resolve(__dirname, 'confirm_form/index.html'),
+                about_us: resolve(__dirname, 'about_us/index.html'),
             },
         },
     },
