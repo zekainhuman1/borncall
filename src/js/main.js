@@ -1,8 +1,5 @@
 import '../scss/style.scss'
-// document.addEventListener("DOMContentLoaded", function () {
-//     var preloader = document.getElementById('preloader');
-//     preloader.style.display = 'none';
-// });
+
 
 document.addEventListener('DOMContentLoaded', function () {
     var services = document.querySelectorAll('.service');
@@ -101,7 +98,6 @@ export function submitForm() {
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        // closeModal();
         showConfirmation();
     });
 }

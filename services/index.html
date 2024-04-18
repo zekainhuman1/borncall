@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Послуги колл-центру. Call center services">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BornCall | Підтвердження форми </title>
+
+    <link rel="stylesheet" href="../src/scss/services.scss" as="style">
+    <link rel="preload" href="/src/public/svg/confirm.svg" as="image">
+    <link rel="preload" as="font" type="font/woff2" href="../src/public/fonts/Lato-Regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="../src/public/fonts/Lato-Black.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="../src/public/fonts/Lato-Bold.woff2" crossorigin>
+</head>
+
+<body>
+    <div class="preloader" id="preloader">
+        <div class="cback">
+            <div class="cback-circle fn1"></div>
+            <div class="cback-circle fn2"></div>
+            <div class="cback-circle cback-circle--phone">
+                <i class='phone-icon'></i>
+            </div>
+        </div>
+    </div>
+
+    <header class="header hidden" id="header">
+        <div class="header__logo">
+            <picture>
+                <source srcset="../src/public/image/logo-65fc3a74c2793.webp" type="image/webp">
+                <img src="../src/public/image/logo.png" alt="BornCall logo">
+            </picture>
+        </div>
+
+        <input id="burger" type="checkbox">
+        <label class="burger" for="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="/">Головна</a></li>
+                <li class="header__menu-item"><a href="/about_us/">Про нас</a></li>
+                <li class="header__menu-item"><a href="/services/">Послуги</a></li>
+                <li class="header__menu-item"><a href="#!">Контакти</a></li>
+            </ul>
+        </nav>
+
+        <a class="phone" href="tel:+380990765474"><img src="../src/public/svg/phone-call.svg" alt="phone-call">(099)
+            076-54-74</a>
+
+        <button class="header__button" onclick="showForm()">Запланувати дзвінок</button>
+
+        <div class="modal" id="modal">
+            <div class="modal__content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <form name="contact" class="modal__form" action="/confirm_form/" netlify>
+                    <br>
+                    <label for="nameField">Введіть Ваше ім'я:</label>
+                    <input type="text" id="nameField" name="nameField" placeholder="Микола"><br><br>
+                    <label for="phoneField">Ваш номер телефону:</label>
+                    <input type="tel" id="phoneField" name="phoneField" placeholder="+380998765432"
+                        pattern="^\+380\d{9}$"><br><br>
+                    <input type="submit" value="Відправити">
+                </form>
+            </div>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+
+        <div class="menu-place"></div>
+
+    </header>
+
+
+
+    <main class="main hidden" id="main">
+        <div class="blog-card">
+            <div class="meta">
+                <div class="photo img1"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Прийом вхідних дзвінків (гаряча лінія)</h2>
+                <h3>Покращення задоволеності клієнтів, збільшення продажів</h3>
+                <p>Послуга контакт-центру, яка передбачає відповіді на дзвінки від клієнтів. Ця послуга є важливою для
+                    будь-якого бізнесу, який хоче надавати якісний сервіс своїм клієнтам.</p>
+            </div>
+        </div>
+
+        <div class="blog-card alt">
+            <div class="meta">
+                <div class="photo img2"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Аутсорсинг вхідних дзвінків</h2>
+                <h3>Можливість покращити якість обслуговування клієнтів, зменшити витрати та підвищити продуктивність
+                </h3>
+                <p>Послуга, при якій компанія передає функцію прийому вхідних дзвінків сторонньому постачальнику послуг.
+                    Цей вид аутсорсингу є популярним серед компаній різного розміру та галузей.</p>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="meta">
+                <div class="photo img3"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Віртуальний секретар</h2>
+                <h3>цінний актив для компанії, яка хоче покращити обслуговування клієнтів і підвищити свою ефективність
+                </h3>
+                <p>Послуга, при якій компанія передає функцію прийому вхідних дзвінків та виконання інших
+                    адміністративних завдань сторонньому постачальнику послуг.</p>
+            </div>
+        </div>
+
+        <div class="blog-card alt">
+            <div class="meta">
+                <div class="photo img4"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 2,70 грн/хвилина</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Опрацювання дзвінків та заявок</h2>
+                <h3>для компаній, які хочуть покращити якість обслуговування клієнтів по всім напрямкам комунікації</h3>
+                <p>Послуга контакт-центру, яка передбачає відповіді на дзвінки та заявки від клієнтів, а також надання
+                    інформації та вирішення проблем. Ця послуга є важливою для будь-якого бізнесу, який хоче надавати
+                    якісний сервіс своїм клієнтам.</p>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="meta">
+                <div class="photo img5"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Прийом замовлень</h2>
+                <h3>є важливою для будь-якого бізнесу, який продає товари та послуги через телефон або онлайн.</h3>
+                <p>Послуга контакт-центру, яка передбачає відповіді на дзвінки та заявки від клієнтів, а також прийом
+                    замовлень на товари та послуги. Ця послуга є важливою для будь-якого бізнесу, який продає товари та
+                    послуги через телефон або онлайн.</p>
+            </div>
+        </div>
+
+        <div class="blog-card alt">
+            <div class="meta">
+                <div class="photo img6"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Холодні дзвінки</h2>
+                <h3>для бізнесу, який хоче збільшити продажі або розширити свою клієнтську базу</h3>
+                <p>Послуга контакт-центру, при якій оператори контакт-центру телефонують потенційним клієнтам, які ще не
+                    мають відношення до компанії. Ця послуга є важливою для будь-якого бізнесу, який хоче збільшити
+                    продажі або розширити свою клієнтську базу.</p>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="meta">
+                <div class="photo img7"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Актуалізація бази даних</h2>
+                <h3>Не дозволяйте своїй базі даних клієнтів застарівати. Актуалізуйте її сьогодні!</h3>
+                <p>Послуга контакт-центру, при якій оператори контакт-центру перевіряють і оновлюють інформацію про
+                    клієнтів у базі даних компанії. Ця послуга є важливою для будь-якого бізнесу, який хоче забезпечити
+                    точну і актуальну інформацію про своїх клієнтів.</p>
+            </div>
+        </div>
+
+        <div class="blog-card alt">
+            <div class="meta">
+                <div class="photo img8"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Обдзвін клієнтів</h2>
+                <h3>Ми допоможемо вам зберегти зв'язок зі своїми клієнтами і забезпечити їм найкраще обслуговування.
+                </h3>
+                <p>Послуга контакт-центру, при якій оператори контакт-центру здійснюють телефонні дзвінки клієнтам
+                    компанії. Ця послуга може використовуватися для різних цілей.</p>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="meta">
+                <div class="photo img9"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Таємний дзвінок</h2>
+                <h3>Не дозволяйте помилкам обслуговування клієнтів впливати на ваш бізнес. Замовляйте таємний дзвінок
+                </h3>
+                <p>Послуга контакт-центру, при якій оператори контакт-центру здійснюють телефонні дзвінки клієнтам
+                    компанії, представляючись як звичайні клієнти. Ця послуга використовується для оцінки якості
+                    обслуговування клієнтів компанії.</p>
+            </div>
+        </div>
+
+        <div class="blog-card alt">
+            <div class="meta">
+                <div class="photo img10"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Глибинне інтерв’ю</h2>
+                <h3>Глибинне інтерв’ю - це ефективний спосіб отримати глибоке розуміння потреб і запитів клієнтів.</h3>
+                <p>Послуга контакт-центру, при якій оператори контакт-центру проводять детальні інтерв’ю з клієнтами
+                    компанії. Ця послуга використовується для отримання глибокого розуміння потреб і запитів клієнтів.
+                </p>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="meta">
+                <div class="photo img11"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Телефонне опитування</h2>
+                <h3>Ми допоможемо вам краще зрозуміти думки і запити ваших клієнтів.</h3>
+                <p>Послуга контакт-центру, при якій оператори контакт-центру проводять опитування з клієнтами компанії
+                    за допомогою телефону. Ця послуга використовується для збору інформації про думки, запити та потреби
+                    клієнтів.</p>
+            </div>
+        </div>
+
+        <div class="blog-card alt">
+            <div class="meta">
+                <div class="photo img12"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Виявлення лояльності</h2>
+                <h3>Не дозволяйте втрачати клієнтів. Замовляйте виявлення лояльності сьогодні!</h3>
+                <p>Послуга контакт-центру, при якій оператори контакт-центру проводять опитування з клієнтами компанії,
+                    щоб визначити рівень їхньої лояльності. Ця послуга використовується для оцінки того, наскільки
+                    клієнти задоволені продуктами, послугами та обслуговуванням компанії.</p>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="meta">
+                <div class="photo img13"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 2,70 грн/хвилина</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Омніканальне обслуговування</h2>
+                <h3>Омніканальне обслуговування - це майбутнє в обслуговуванні клієнтів.</h3>
+                <p>Передбачається наявність кількох каналів зв'язку з клієнтами, таких як телефон, електронна пошта,
+                    чат-бот, соціальні мережі, інтернет-магазин та інші. Клієнти можуть використовувати будь-який з цих
+                    каналів для отримання інформації про продукти та послуги, звернення за допомогою чи вирішення
+                    проблем. </p>
+            </div>
+        </div>
+
+        <div class="blog-card alt">
+            <div class="meta">
+                <div class="photo img14"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Автоінформатор</h2>
+                <h3>Автоінформатор - це ефективний спосіб надати персональну інформацію великій кількості клієнтів.</h3>
+                <p>Послуга, яка дозволяє організувати швидкісний автоматичний продзвін/інформування, широко
+                    використовується службами таксі, мобільними операторами та іншими компаніями, що мають велику
+                    клієнтську базу.</p>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="meta">
+                <div class="photo img15"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Автообзвін</h2>
+                <h3>Це потужний інструмент для масового інформування клієнтів</h3>
+                <p>Потужний інструмент для масового інформування клієнтів. За допомогою автообзвону ви можете швидко і
+                    ефективно донести до своїх клієнтів важливу інформацію, наприклад, про знижки, акції, стан рахунку
+                    або заборгованість.</p>
+            </div>
+        </div>
+
+        <div class="blog-card alt">
+            <div class="meta">
+                <div class="photo img16"></div>
+                <div class="details">
+                    <img width="30px" height="30px" src="../src/public/svg/price.svg" alt="price">
+                    <span>від 120 грн/година</span>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Ваша пропозиція</h2>
+                <h3>Якщо Вам потрібна послуга, що не включена в доступний перечень, то ми її реалізуємо</h3>
+                <p>По Вашому замовленню буде розроблена люба послуга, що по якійсь причині не була включена додоступних
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer class="footer hidden" id="footer">
+        <address>
+            <a class="phone" href="tel:+380990765474"><img src="../src/public/svg/phone-call.svg" alt="phone-call">(099)
+                076-54-74</a>
+            <a class="email" href="mailto:borncall.pl@gmail.com"><img src="../src/public/svg/email.svg"
+                    alt="phone-call">borncall.pl@gmail.com</a>
+        </address>
+        <span>©2023 від Borncall</span>
+    </footer>
+    <div id="app"></div>
+    <script type="module" src="../src/js/main.js"></script>
+</body>
+
+</html>
