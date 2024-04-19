@@ -535,6 +535,16 @@
         }
     }
 
+    .email {
+        font-size: 16px;
+        gap: 8px;
+
+        img {
+            height: 25px;
+            width: 25px;
+        }
+    }
+
     .subhero {
         max-width: 800px;
         padding: 80px 20px;
