@@ -183,11 +183,11 @@
 }
 
 .guarantees__card {
-    width: 10em;
+    width: 18rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 23vh;
+    height: 20vh;
     margin: 10px;
     background-color: #fff;
 }
@@ -220,7 +220,24 @@
     }
 }
 
+@media screen and (min-width: 1201px) {
+    .guarantees__card {
+        width: 11rem;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1201px) {
+    .guarantees__card {
+        width: 16rem;
+    }
+}
+
 @media screen and (min-width: 421px) and (max-width: 800px) {
+
+    .guarantees__card {
+        width: 14rem;
+    }
+
     .container__item {
         padding-left: 0 !important;
     }
@@ -247,5 +264,11 @@
 
     .item__title {
         font-size: 1em !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .guarantees__card {
+        width: 80%;
     }
 }

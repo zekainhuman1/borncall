@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Послуги колл-центру. Call center services">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BornCall | Підтвердження форми </title>
+
+    <link rel="stylesheet" href="../src/scss/contacts.scss" as="style">
+    <!-- <link rel="preload" href="/src/public/svg/confirm.svg" as="image"> -->
+    <link rel="preload" as="font" type="font/woff2" href="../src/public/fonts/Lato-Regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="../src/public/fonts/Lato-Black.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="../src/public/fonts/Lato-Bold.woff2" crossorigin>
+</head>
+
+<body>
+    <div class="preloader" id="preloader">
+        <div class="cback">
+            <div class="cback-circle fn1"></div>
+            <div class="cback-circle fn2"></div>
+            <div class="cback-circle cback-circle--phone">
+                <i class='phone-icon'></i>
+            </div>
+        </div>
+    </div>
+
+    <header class="header hidden" id="header">
+        <div class="header__logo">
+            <picture>
+                <source srcset="../src/public/image/logo-65fc3a74c2793.webp" type="image/webp">
+                <img src="../src/public/image/logo.png" alt="BornCall logo">
+            </picture>
+        </div>
+
+        <input id="burger" type="checkbox">
+        <label class="burger" for="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="/">Головна</a></li>
+                <li class="header__menu-item"><a href="/about_us/">Про нас</a></li>
+                <li class="header__menu-item"><a href="/services/">Послуги</a></li>
+                <li class="header__menu-item"><a href="/contacts/">Контакти</a></li>
+            </ul>
+        </nav>
+
+        <a class="phone" href="tel:+380990765474"><img src="../src/public/svg/phone-call.svg" alt="phone-call">(099)
+            076-54-74</a>
+
+        <button class="header__button" onclick="showForm()">Запланувати дзвінок</button>
+
+        <div class="modal" id="modal">
+            <div class="modal__content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <form name="contact" class="modal__form" action="/confirm_form/" netlify>
+                    <br>
+                    <label for="nameField">Введіть Ваше ім'я:</label>
+                    <input type="text" id="nameField" name="nameField" placeholder="Микола"><br><br>
+                    <label for="phoneField">Ваш номер телефону:</label>
+                    <input type="tel" id="phoneField" name="phoneField" placeholder="+380998765432"
+                        pattern="^\+380\d{9}$"><br><br>
+                    <input type="submit" value="Відправити">
+                </form>
+            </div>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+
+        <div class="menu-place"></div>
+
+    </header>
+
+    <main class="main hidden" id="main">
+
+        <div class="contacts">
+            <picture class="contacts__img">
+                <source srcset="../src/public/image/phoneimgwebp.webp" type="image/webp">
+                <img src="../src/public/image/phoneimg.jpg" alt="Phone img">
+            </picture>
+            <div class="contacts__block">
+                <h2 class="contact__title">Наші контакти</h2>
+                <div class="contact__info">
+                    <div class="contact__line">
+                        <div class="line__communication">
+                            <h3 class="communication__title">Канали комунікації</h3>
+                            <address>
+                                <a class="phone" href="tel:+380990765474"><img src="../src/public/svg/phone-call.svg"
+                                        alt="phone-call">(099)076-54-74</a>
+                                <a class="email" href="mailto:borncall.pl@gmail.com"><img
+                                        src="../src/public/svg/email.svg" alt="phone-call">borncall.pl@gmail.com</a>
+                            </address>
+                        </div>
+
+                        <div class="line__time">
+                            <h3 class="time__title">Робочі години</h3>
+                            <div>
+                                <p class="time__data">Пн-Пт 9:00 - 16:45</p>
+                                <p class="time__date">Сб та Нд вихідні</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="contact__addr">
+                        <div class="addr__map">
+                            <h3 class="map__title">Адреса</h3>
+                            <address>
+                                <p class="map__str">вул. Небесної Сотні, 10/19, м.</p>
+                                <p class="map__sity">Полтава, 36020, Україна</p>
+                            </address>
+                        </div>
+                        <div class="addr__soc">
+                            <h3 class="soc__title">Соціальні мережі</h3>
+                            <div class="footer-social-icons">
+                                <ul class="social-icons">
+                                    <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+                                    <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="footer hidden" id="footer">
+        <address>
+            <a class="phone" href="tel:+380990765474"><img src="../src/public/svg/phone-call.svg" alt="phone-call">(099)
+                076-54-74</a>
+            <a class="email" href="mailto:borncall.pl@gmail.com"><img src="../src/public/svg/email.svg"
+                    alt="phone-call">borncall.pl@gmail.com</a>
+        </address>
+        <span>©2023 від Borncall</span>
+    </footer>
+    <div id="app"></div>
+    <script type="module" src="../src/js/main.js"></script>
+</body>
+
+</html>

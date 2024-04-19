@@ -9,6 +9,7 @@ export default defineConfig({
                 confirm_form: resolve(__dirname, 'confirm_form/index.html'),
                 about_us: resolve(__dirname, 'about_us/index.html'),
                 services: resolve(__dirname, 'services/index.html'),
+                contacts: resolve(__dirname, 'contacts/index.html'),
             },
         },
     },
