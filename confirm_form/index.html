@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Послуги колл-центру. Call center services">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BornCall | Підтвердження форми </title>
-    <script>
-      setTimeout(function() {
-        history.back();
-      }, 5000);
-    </script>
-    <link rel="stylesheet" href="/src/scss/confirm.scss" as="style">
-    <!-- <link rel="preload" href="/src/public/svg/confirm.svg" as="image"> -->
-    <link rel="preload" as="font" type="font/woff2" href="/src/public/fonts/Lato-Regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/src/public/fonts/Lato-Black.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/src/public/fonts/Lato-Bold.woff2" crossorigin>
-  </head>
-  <body>
-<main class="confirm">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Послуги колл-центру. Call center services">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BornCall | Підтвердження форми </title>
+  <script>
+    setTimeout(function () {
+      history.back();
+    }, 5000);
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K7FV4X8B');</script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="stylesheet" href="/src/scss/confirm.scss" as="style">
+  <!-- <link rel="preload" href="/src/public/svg/confirm.svg" as="image"> -->
+  <link rel="preload" as="font" type="font/woff2" href="/src/public/fonts/Lato-Regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/src/public/fonts/Lato-Black.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/src/public/fonts/Lato-Bold.woff2" crossorigin>
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7FV4X8B"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  
+  <main class="confirm">
     <img src="/src/public/svg/confirm.svg" alt="confirm">
     <h1 class="confirm__title">Контакті дані відправлено!</h1>
     <p class="confirm__subtitle">Очікуйте на дзвінок менеджера.</p>
     <button onclick="history.back()">Повернутися</button>
-</main>
-  </body>
+  </main>
+</body>
+
 </html>
-
-
